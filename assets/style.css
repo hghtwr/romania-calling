@@ -1,0 +1,152 @@
+/* ===========================
+   Romania Calling – Stylesheet
+   =========================== */
+
+:root {
+  --color-blue:   #002B7F;
+  --color-yellow: #FCD116;
+  --color-red:    #CE1126;
+  --color-bg:     #f9f6ef;
+  --color-text:   #1a1a1a;
+  --color-muted:  #555;
+  --font-main:    'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --radius:       8px;
+  --shadow:       0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-main);
+  background: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+/* ---- Header ---- */
+.site-header {
+  background: var(--color-blue);
+  color: #fff;
+  padding: 2.5rem 0 2rem;
+  text-align: center;
+}
+
+.site-header h1 {
+  font-size: 2.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  margin-bottom: 0.4rem;
+}
+
+.site-header .tagline {
+  font-size: 1.1rem;
+  opacity: 0.85;
+}
+
+/* Romanian flag strip */
+.flag {
+  display: flex;
+  justify-content: center;
+  gap: 0;
+  height: 12px;
+  width: 90px;
+  margin: 0 auto 1.2rem;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.flag span {
+  flex: 1;
+  display: block;
+}
+
+.flag-blue   { background: var(--color-blue); }
+.flag-yellow { background: var(--color-yellow); }
+.flag-red    { background: var(--color-red); }
+
+/* ---- Hero section ---- */
+.hero {
+  margin: 2.5rem 0;
+  padding: 2rem;
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.hero h2 {
+  font-size: 1.8rem;
+  color: var(--color-blue);
+  margin-bottom: 0.8rem;
+}
+
+/* ---- Highlights ---- */
+.highlights {
+  margin-bottom: 3rem;
+}
+
+.highlights h2 {
+  font-size: 1.8rem;
+  color: var(--color-blue);
+  margin-bottom: 1.2rem;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.25rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 1.5rem 1.25rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+
+.card-icon {
+  font-size: 2.2rem;
+  margin-bottom: 0.6rem;
+}
+
+.card h3 {
+  font-size: 1.1rem;
+  color: var(--color-blue);
+  margin-bottom: 0.4rem;
+}
+
+.card p {
+  font-size: 0.9rem;
+  color: var(--color-muted);
+}
+
+/* ---- Footer ---- */
+.site-footer {
+  background: var(--color-blue);
+  color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 1.2rem 0;
+  font-size: 0.9rem;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 480px) {
+  .site-header h1 {
+    font-size: 2rem;
+  }
+}
